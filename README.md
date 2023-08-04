@@ -32,11 +32,13 @@ The output should display code 200, content-type json and display message data t
 if you pass invalid uuid 
 curl -X GET -i localhost:5000/person/not-a-valid-uuid
 it will display code 404, content-type text/html and message 
-#<!doctype html>
-#<html lang=en>
-#<title>404 Not Found</title>
-#<h1>Not Found</h1>
-#<p>The requested URL was not found on the server. If you entered the URL manually, please check your spelling and try again.</p>
+<!--
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually, please check your spelling and try again.</p>
+-->
 //
 if you pass a data that does not exist. the method should return with 404, content-type json and display message
 { "message": "person not found" }
@@ -47,11 +49,13 @@ the method should display code 200, content-type json and message uuid. check th
 curl -X GET -i localhost:5000/count, it should be decrease from 5 to 4
 //
 if u pass an invalid UUID the server should return a 404 message conten-type text/html
-#<!doctype html>
-#<html lang=en>
-#<title>404 Not Found</title>
-#<h1>Not Found</h1>
-#<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+<!--
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+-->
 //
 finally if u pass valid UUI that doesnt exist in the data list. the method should return 404, content-type json and display message { "message": "person not found" }
 
